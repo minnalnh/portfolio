@@ -1,37 +1,17 @@
 import Header from './components/Header';
+import About from './components/About';
+import Thesis from './components/Thesis';
+import bgImage from './assets/images/background.png';
 import './App.css'
 
 function App() {
   return (
-    <>
-    <Header />
-    </>
+    <div className="min-h-screen bg-cover bg-center" style={{ backgroundImage: `url(${bgImage})`}}>
+      <Header />
+      <About />
+      <Thesis />
+    </div>
   )
 }
 
 export default App;
-
-/*
-// src/App.tsx
-import React from 'react';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import Header from './components/header'
-import Categories from './components/categories';
-import CartContext from './components/cartContext';
-import LogIn from './components/logIn';
-import Product from './components/product';
-import ShoppingCart from './components/shoppingCart';
-import PopUp from './components/popUp';
-
-function App() {
-  return (
-    <BrowserRouter>
-          <Header />
-          <Categories />
-          <PopUp />
-    </BrowserRouter>
-  );
-}
-
-export default App;
-*/

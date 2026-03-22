@@ -3,11 +3,11 @@
 @tailwind utilities;
 
 :root {
-  --header-bg: #4F5743;
-  --bg: #B3B7A9;
-  --detail-dark: #F3BABA;
-  --detail-light: #F9DDD8;
-  --light: #FAF8F5;
+  --sage: #4F5743;
+  --sage-light: #B3B7A9;
+  --blush: #F3BABA;
+  --fair: #F9DDD8;
+  --sand: #FAF8F5;
 
   --sans: system-ui, 'Segoe UI', Roboto, sans-serif;
   --heading: system-ui, 'Segoe UI', Roboto, sans-serif;
@@ -28,17 +28,82 @@
   }
 }
 
+.bg-sage {
+  background-color: var(--sage);
+}
+
+.bg-sage-light {
+  background-color: var(--sage-light);
+}
+
+.bg-blush {
+  background-color: var(--blush);
+}
+
+.bg-fair {
+  background-color: var(--fair);
+}
+
+.bg-sand {
+  background-color: var(--sand);
+}
+
+.bg-sand-opacity {
+  background-color: rgba(250, 248, 245, 0.7);
+  border-radius: 1rem;
+  padding: 1rem;
+}
+
+.txt-sand {
+  color: var(--sand);
+}
+
+.txt-dark {
+  color: #000;
+}
+
 .header {
-  background-color: var(--header-bg);
+  padding-top: 3rem;
+  height: 100vh;
 
-  .header__title-container {
-    
-
-  }
   .header__profile-pic {
     width: 10rem;
+    margin-top: 10rem;
+    margin-right: 1rem;
+    margin-left: 2rem;
   }
 
+  .header__detail {
+    height: 5rem;
+    margin-top: 1rem;
+  }
+
+  .header__grid-container {
+    margin-top: 5rem;
+  }
+
+}
+
+.thesis__image {
+  width: 40%;
+}
+
+.thesis__title {
+  font-weight: 800;
+}
+
+.thesis__sub-title {
+  font-weight: 400;
+}
+
+.thesis__link {
+  color: #000;
+}
+
+.about {
+  .about__nature-pic {
+    margin-left: 1rem;
+  }
 }
 
 @media (prefers-color-scheme: dark) {
@@ -66,7 +131,7 @@
   max-width: 100%;
   margin: 0 auto;
   text-align: center;
-  border-inline: 1px solid var(--border);
+  /* border-inline: 1px solid var(--border); */
   min-height: 100svh;
   display: flex;
   flex-direction: column;
@@ -119,4 +184,24 @@ code {
   line-height: 135%;
   padding: 4px 8px;
   background: var(--code-bg);
+}
+
+/* @media (max-width: 689px) {
+
+  .header {
+    display: flex;
+    flex-direction: column;
+  }
+  .header__grid-container {
+    display: flex;
+    flex-direction: column;
+  }
+} */
+
+@media (max-width: 689px) {
+  
+  .about {
+    flex-direction: column;
+    align-items: center;
+  }
 }
