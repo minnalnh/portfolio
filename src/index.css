@@ -1,16 +1,14 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
 
 :root {
-  --sage: #4F5743;
-  --sage-light: #B3B7A9;
-  --blush: #F3BABA;
-  --fair: #F9DDD8;
-  --sand: #FAF8F5;
+  --sage: #4f5743;
+  --sage-light: #b3b7a9;
+  --blush: #ae6b6b;
+  --fair: #f9ddd8;
+  --sand: #faf8f5;
 
-  --sans: system-ui, 'Segoe UI', Roboto, sans-serif;
-  --heading: system-ui, 'Segoe UI', Roboto, sans-serif;
+  --sans: system-ui, "Segoe UI", Roboto, sans-serif;
+  --heading: system-ui, "Segoe UI", Roboto, sans-serif;
   --mono: ui-monospace, Consolas, monospace;
 
   font: 18px/145% var(--sans);
@@ -48,8 +46,16 @@
   background-color: var(--sand);
 }
 
+.header-bg {
+  background-image: url("./assets/images/header-background.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%;
+}
+
 .bg-sand-opacity {
-  background-color: rgba(250, 248, 245, 0.7);
+  background-color: rgba(250, 248, 245, 0.9);
   border-radius: 1rem;
   padding: 1rem;
 }
@@ -62,9 +68,13 @@
   color: #000;
 }
 
+body {
+  background-color: var(--sage-light);
+}
+
 .header {
   padding-top: 3rem;
-  height: 100vh;
+  min-height: 140vh;
 
   .header__profile-pic {
     width: 10rem;
@@ -81,7 +91,6 @@
   .header__grid-container {
     margin-top: 5rem;
   }
-
 }
 
 .thesis__image {
@@ -199,9 +208,12 @@ code {
 } */
 
 @media (max-width: 689px) {
-  
   .about {
     flex-direction: column;
     align-items: center;
+  }
+
+  .thesis {
+    flex-direction: column;
   }
 }
