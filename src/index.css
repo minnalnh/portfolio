@@ -72,27 +72,6 @@ body {
   background-color: var(--sage-light);
 }
 
-.header {
-  padding-top: 3rem;
-  min-height: 140vh;
-
-  .header__profile-pic {
-    width: 10rem;
-    margin-top: 10rem;
-    margin-right: 1rem;
-    margin-left: 2rem;
-  }
-
-  .header__detail {
-    height: 5rem;
-    margin-top: 1rem;
-  }
-
-  .header__grid-container {
-    margin-top: 5rem;
-  }
-}
-
 .thesis__image {
   width: 40%;
 }
