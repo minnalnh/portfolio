@@ -11,8 +11,8 @@ const Thesis = () => {
   const thesisImages = [thesisCover, thesisDevTools, thesisSustainableTech];
 
   return (
-    <div className="thesis flex flex-col max-w-[1126px] mx-auto gap-8">
-      <div className="thesis__flex-container flex">
+    <div className="thesis flex flex-col max-w-[1126px] mx-auto gap-8  overflow-hidden">
+      <div className="thesis__flex-container flex gap-[2rem]">
         <div className="thesis__text-container flex-2">
           <section className="thesis__text-background bg-sand-opacity">
             <h2 className="thesis__title txt-dark font-bold">
@@ -39,7 +39,7 @@ const Thesis = () => {
           className="mySwiper w-full max-w-[350px] h-[500px]"
         >
           {thesisImages.map((image, index) => (
-            <SwiperSlide key={index}>
+            <SwiperSlide key={index} className="h-full overflow-hidden">
               <ThesisImage image={image} />
             </SwiperSlide>
           ))}

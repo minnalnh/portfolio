@@ -6,7 +6,7 @@ import { cms } from "../components/data/techniques";
 
 const Experience = () => {
   return (
-    <section className="experience bg-sand txt-dark ">
+    <section className="experience bg-sand txt-dark">
       <h2 className="tech-title txt-dark pt-[2rem] pb-[1rem]">
         Programmeringsspråk / webbtekniker
       </h2>
@@ -25,6 +25,7 @@ const Experience = () => {
           </article>
         ))}
       </section>
+      <hr />
 
       <div className="second-row-container flex justify-center">
         <section className="first-row flex-1">
@@ -67,6 +68,7 @@ const Experience = () => {
           </section>
         </section>
       </div>
+      <hr />
 
       <div className="third-row-container flex justify-center">
         <section className="third-row flex-1">
@@ -109,6 +111,7 @@ const Experience = () => {
               </article>
             ))}
           </section>
+          <hr />
         </section>
       </div>
     </section>

@@ -46,14 +46,6 @@
   background-color: var(--sand);
 }
 
-.header-bg {
-  background-image: url("./assets/images/header-background.png");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  width: 100%;
-}
-
 .bg-sand-opacity {
   background-color: rgba(250, 248, 245, 0.9);
   border-radius: 1rem;
@@ -119,7 +111,6 @@ body {
   max-width: 100%;
   margin: 0 auto;
   text-align: center;
-  /* border-inline: 1px solid var(--border); */
   min-height: 100svh;
   display: flex;
   flex-direction: column;
@@ -128,6 +119,8 @@ body {
 
 body {
   margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 h1,
@@ -173,18 +166,6 @@ code {
   padding: 4px 8px;
   background: var(--code-bg);
 }
-
-/* @media (max-width: 689px) {
-
-  .header {
-    display: flex;
-    flex-direction: column;
-  }
-  .header__grid-container {
-    display: flex;
-    flex-direction: column;
-  }
-} */
 
 @media (max-width: 689px) {
   .about {

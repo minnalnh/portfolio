@@ -6,8 +6,8 @@ const ThesisImage = ({ image }: ThesisImageProps) => {
   return (
     <img
       src={image}
-      alt="Min kandidatuppsats"
-      className="thesis-image flex-shrink-0 object-contain"
+      alt="Sida ur min kandidatuppsats"
+      className="thesis-image w-full h-full flex-shrink-0 object-cover"
     />
   );
 };
