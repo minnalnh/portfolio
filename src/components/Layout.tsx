@@ -1,4 +1,3 @@
-import { Outlet } from "react-router-dom";
 import Header from "../pageSections/Header";
 import About from "../pageSections/About";
 import Thesis from "../pageSections/Thesis";
@@ -12,7 +11,7 @@ const Layout = () => {
     <div className="wrapper mx-[1rem]">
       <Header />
       <main className="page">
-        <Outlet />
+        <About />
       </main>
       <Thesis />
       <Experience />

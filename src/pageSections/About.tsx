@@ -2,17 +2,22 @@ import naturePic from "../assets/images/nature-pic.png";
 import cowboyPic from "../assets/images/cowboy-pic.png";
 import cafePic from "../assets/images/cafe-pic.png";
 import doodle from "../assets/images/doodle.png";
+import { useRef } from "react";
+import { useIsVisible } from "../hooks/useIsVisible";
 
 const About = () => {
+  const ref = useRef<HTMLDivElement>(null);
+  const isVisible = useIsVisible(ref);
+
   return (
-    <section className="about flex gap-6 p-6 flex flex-col" id="About">
+    <section className="about gap-6 p-6 flex flex-col" id="About" ref={ref}>
       <article className="about__container flex">
         <div className="about__image-container w-1/2 flex">
           {/* Bild 1 */}
           <img
             src={naturePic}
             alt="Jag står vid en sjö i naturen"
-            className="about__nature-pic w-1/2 h-full object-contain"
+            className={`about__nature-pic w-1/2 h-full object-contain transition-opacity ease-in duration-700 ${isVisible ? "opacity-100" : "opacity-0"}`}
           />
 
           {/* Bild-container */}
@@ -21,14 +26,14 @@ const About = () => {
             <img
               src={cowboyPic}
               alt="Jag är utklädd till cowboy"
-              className="h-1/3 object-contain"
+              className={`h-1/3 object-contain transition-opacity ease-in duration-800 ${isVisible ? "opacity-100" : "opacity-0"}`}
             />
 
             {/* Bild 3 */}
             <img
               src={cafePic}
               alt="Jag dricker kaffe på ett café"
-              className="h-1/3 object-contain"
+              className={`h-1/3 object-contain transition-opacity ease-in duration-900 ${isVisible ? "opacity-100" : "opacity-0"}`}
             />
           </div>
         </div>

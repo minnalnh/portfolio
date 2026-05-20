@@ -1,19 +1,19 @@
-import { Swiper, SwiperSlide } from "swiper/react";
-import { EffectCards } from "swiper/modules";
-import ThesisImage from "../components/ThesisImage";
-import thesisCover from "../assets/images/thesis-cover.png";
-import thesisDevTools from "../assets/images/thesis-dev-tools.png";
-import thesisSustainableTech from "../assets/images/thesis-sustainable-tech.png";
-import "swiper/css";
-import "swiper/css/effect-cards";
+import ThesisCarousel from "../components/ThesisCarousel";
+import DoodleThree from "../assets/images/doodle-3.png";
+import { useIsVisible } from "../hooks/useIsVisible";
+import { useRef } from "react";
 
 const Thesis = () => {
-  const thesisImages = [thesisCover, thesisDevTools, thesisSustainableTech];
+  const ref = useRef<HTMLDivElement>(null);
+  const isVisible = useIsVisible(ref);
 
   return (
-    <div className="thesis flex flex-col max-w-[1126px] mx-auto gap-8  overflow-hidden">
+    <section
+      className={`thesis flex flex-col max-w-[1126px] mx-auto gap-8  overflow-hidden transition-opacity ease-in duration-700 ${isVisible ? "opacity-100" : "opacity-0"}`}
+      ref={ref}
+    >
       <div className="thesis__flex-container flex gap-[2rem]">
-        <div className="thesis__text-container flex-2">
+        <div className="thesis__text-container flex-1">
           <section className="thesis__text-background bg-sand-opacity">
             <h2 className="thesis__title txt-dark font-bold">
               Företags och organisationers digitala miljöpåverkan
@@ -32,18 +32,7 @@ const Thesis = () => {
             </p>
           </section>
         </div>
-        <Swiper
-          effect={"cards"}
-          grabCursor={true}
-          modules={[EffectCards]}
-          className="mySwiper w-full max-w-[350px] h-[500px]"
-        >
-          {thesisImages.map((image, index) => (
-            <SwiperSlide key={index} className="h-full overflow-hidden">
-              <ThesisImage image={image} />
-            </SwiperSlide>
-          ))}
-        </Swiper>
+        <ThesisCarousel />
       </div>
       <p className="thesis__link-text txt-dark bg-sand-opacity">
         Länk till min kandidatuppsats:{" "}
@@ -54,7 +43,8 @@ const Thesis = () => {
           https://urn.kb.se/resolve?urn=urn:nbn:se:kau:diva-106881
         </a>
       </p>
-    </div>
+      <img src={DoodleThree} alt="" className="mb-[2rem]" />
+    </section>
   );
 };
 
