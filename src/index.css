@@ -1,7 +1,7 @@
 @import "tailwindcss";
 
 :root {
-  --sage: #4f5743;
+  --sage: #424937;
   --sage-light: #b3b7a9;
   --blush: #ae6b6b;
   --fair: #f9ddd8;
@@ -52,12 +52,12 @@
   padding: 1rem;
 }
 
-.txt-sand {
-  color: var(--sand);
-}
-
 .txt-dark {
   color: #000;
+}
+
+.txt-light {
+  color: #fff;
 }
 
 body {

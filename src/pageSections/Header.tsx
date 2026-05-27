@@ -19,26 +19,27 @@ const Header = () => {
           {/* profilbild */}
           <motion.img
             src={profilePic}
-            alt="Profilbild"
+            alt="Porträttbild av mig, utomhus framför en stenvägg"
             className="header__profile-pic object-contain w-[10rem]"
             initial={{ scale: 0 }}
             animate={{ scale: 1 }}
           />
 
           {/* centrerad grid-container */}
-          <div className="header__grid-container grid grid-cols-[auto_auto_auto] grid-rows-[auto_auto] items-start place-items-center ml-[1rem]">
+          <div className="header__grid-container flex flex-col lg:grid grid-cols-[auto_auto_auto] grid-rows-[auto_auto] place-items-center lg:ml-[1rem]">
             {/* dekoration */}
             <motion.img
               src={staircase}
-              alt="Textdekoration"
-              className="header__detail row-span-3 col-start-1 object-contain max-h-[7rem] invisible lg:visible"
+              alt=""
+              aria-hidden="true"
+              className="header__detail row-span-3 col-start-1 object-contain mt-[2rem] max-h-[7rem] hidden lg:block"
               initial={{ scale: 0 }}
               animate={{ scale: 1 }}
             />
 
             {/* titel */}
             <motion.h1
-              className="text-2xl font-semibold txt-sand col-start-2 col-span-3 row-start-2 leading-tight"
+              className="text-2xl font-semibold text-white col-start-2 col-span-3 row-start-2 leading-tight"
               initial={{ scale: 0 }}
               animate={{ scale: 1 }}
             >
@@ -48,7 +49,7 @@ const Header = () => {
 
             {/* undertitel */}
             <motion.h2
-              className="text-sm txt-sand col-start-2 col-span-4 row-start-3 leading-tight"
+              className="text-sm txt-sand col-start-2 col-span-4 row-start-3"
               initial={{ scale: 0 }}
               animate={{ scale: 1 }}
             >

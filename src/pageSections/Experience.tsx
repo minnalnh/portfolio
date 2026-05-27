@@ -11,48 +11,50 @@ const Experience = () => {
   const isVisible = useIsVisible(ref);
 
   return (
-    <section className="experience bg-sand rounded-2xl txt-dark flex-col lg:flex-row">
-      <h2 className="tech-title txt-dark pt-[2rem] pb-[1rem]">
+    <section className="tech bg-sand rounded-2xl flex-col lg:flex-row txt-dark">
+      <h2 className="tech__title pt-[2rem] pb-[1rem] txt-dark">
         Programmeringsspråk / webbtekniker
       </h2>
       <section
-        className={`tech-icons flex gap-[2rem] justify-center transition-opacity ease-in duration-700 ${isVisible ? "opacity-100" : "opacity-0"}`}
+        className={`tech__icons flex flex-wrap gap-[2rem] justify-center transition-opacity ease-in duration-700 ${isVisible ? "opacity-100" : "opacity-0"}`}
         ref={ref}
       >
         {techniques.map((technique) => (
-          <article className="tech-icon sm:w-[40px] md:w-[60px] flex flex-col items-center">
+          <article
+            key={technique.name}
+            className="tech__icon w-[80px] h-[100px] flex flex-col items-center"
+          >
             <img
-              key={technique.name}
               src={technique.icon}
-              alt={technique.name}
-              className="tech-icon__image"
+              alt={`Logotypen för ${technique.name}`}
+              className="tech__image w-[40px] h-[40px] md:w-[50px] md:h-[50px] lg:w-[60px] lg:h-[60px] object-contain"
             />
-            <p className="tech-icon__name text-center text-sm">
-              {technique.name}
-            </p>
+            <p className="tech__name text-center text-md">{technique.name}</p>
           </article>
         ))}
       </section>
       <hr />
 
       <div className="second-row-container flex justify-center">
-        <section className="first-row flex-1">
-          <h2 className="lib-frameworks-title txt-dark pt-[2rem]">
+        <section className="lib-framework first-row flex-1">
+          <h2 className="lib-framework__title pt-[2rem] txt-dark">
             Bibliotek / frameworks
           </h2>
           <section
-            className={`lib-frameworks-icons flex gap-[2rem] justify-center transition-opacity ease-in duration-700 ${isVisible ? "opacity-100" : "opacity-0"}`}
+            className={`lib-framework__icons flex flex-wrap gap-[2rem] justify-center transition-opacity ease-in duration-700 ${isVisible ? "opacity-100" : "opacity-0"}`}
             ref={ref}
           >
             {libFrameworks.map((libFramework) => (
-              <article className="lib-framework-icon w-[80px] h-[100px] sm:w-[40px] md:w-[60px] flex flex-col items-center relative">
+              <article
+                key={libFramework.name}
+                className="lib-framework__icon w-[80px] h-[100px] flex flex-col items-center"
+              >
                 <img
-                  key={libFramework.name}
                   src={libFramework.icon}
-                  alt={libFramework.name}
-                  className="lib-framework__image absolute top-1/2 -translate-y-1/2"
+                  alt={`Logotypen för ${libFramework.name}`}
+                  className="lib-framework__image w-[40px] h-[40px] md:w-[50px] md:h-[50px] lg:w-[60px] lg:h-[60px] object-contain"
                 />
-                <p className="lib-framework__name text-center text-sm absolute bottom-0">
+                <p className="lib-framework__name text-center text-md">
                   {libFramework.name}
                 </p>
               </article>
@@ -60,23 +62,23 @@ const Experience = () => {
           </section>
         </section>
 
-        <section className="second-row flex-1">
-          <h2 className="cms-title txt-dark pt-[2rem]">CMS</h2>
+        <section className="cms second-row flex-1 border-s">
+          <h2 className="cms-title pt-[2rem] txt-dark">CMS</h2>
           <section
-            className={`cms-icons flex gap-[2rem] justify-center transition-opacity ease-in duration-700 ${isVisible ? "opacity-100" : "opacity-0"}`}
+            className={`cms__icons flex flex-wrap gap-[2rem] justify-center transition-opacity ease-in duration-700 ${isVisible ? "opacity-100" : "opacity-0"}`}
             ref={ref}
           >
             {cms.map((eachCMS) => (
-              <article className="cms-icon w-[80px] h-[100px] sm:w-[40px] md:w-[60px] flex flex-col items-center relative">
+              <article
+                key={eachCMS.name}
+                className="cms__icon w-[80px] h-[100px] flex flex-col items-center"
+              >
                 <img
-                  key={eachCMS.name}
                   src={eachCMS.icon}
-                  alt={eachCMS.name}
-                  className="cms__image absolute top-1/2 -translate-y-1/2"
+                  alt={`Logotypen för ${eachCMS.name}`}
+                  className="cms__image w-[40px] h-[40px] md:w-[50px] md:h-[50px] lg:w-[60px] lg:h-[60px] object-contain"
                 />
-                <p className="cms__name text-center text-sm absolute bottom-0">
-                  {eachCMS.name}
-                </p>
+                <p className="cms__name text-center text-md">{eachCMS.name}</p>
               </article>
             ))}
           </section>
@@ -85,22 +87,24 @@ const Experience = () => {
       <hr />
 
       <div className="third-row-container flex justify-center">
-        <section className="third-row flex-1">
-          <h2 className="lib-frameworks-title txt-dark pt-[2rem]">
+        <section className="design-tool third-row flex-1 border-e">
+          <h2 className="design-tool__title pt-[2rem] txt-dark">
             Designverktyg
           </h2>
           <section
-            className={`lib-frameworks-icons flex gap-[2rem] justify-center transition-opacity ease-in duration-700 ${isVisible ? "opacity-100" : "opacity-0"}`}
+            className={`design-tool__icons flex flex-wrap gap-[2rem] justify-center transition-opacity ease-in duration-700 ${isVisible ? "opacity-100" : "opacity-0"}`}
           >
             {designTools.map((designTool) => (
-              <article className="lib-framework-icon sm:w-[40px] md:w-[60px] flex flex-col items-center">
+              <article
+                key={designTool.name}
+                className="design-tool__icon w-[80px] h-[100px] flex flex-col items-center"
+              >
                 <img
-                  key={designTool.name}
                   src={designTool.icon}
-                  alt={designTool.name}
-                  className="lib-framework__image"
+                  alt={`Logotypen för ${designTool.name}`}
+                  className="design-tool__image w-[40px] h-[40px] md:w-[50px] md:h-[50px] lg:w-[60px] lg:h-[60px] object-contain"
                 />
-                <p className="lib-framework__name text-center text-sm">
+                <p className="design-tool__name text-center text-md">
                   {designTool.name}
                 </p>
               </article>
@@ -108,22 +112,24 @@ const Experience = () => {
           </section>
         </section>
 
-        <section className="fourth-row flex-1">
-          <h2 className="lib-frameworks-title txt-dark pt-[2rem]">
+        <section className="each-runtime fourth-row flex-1">
+          <h2 className="each-runtime__title pt-[2rem] txt-dark">
             JavaScript-runtime
           </h2>
           <section
-            className={`lib-frameworks-icons flex gap-[2rem] justify-center transition-opacity ease-in duration-700 ${isVisible ? "opacity-100" : "opacity-0"}`}
+            className={`each-rumtime__icons flex flex-wrap gap-[2rem] justify-center transition-opacity ease-in duration-700 ${isVisible ? "opacity-100" : "opacity-0"}`}
           >
             {runtime.map((eachRuntime) => (
-              <article className="lib-framework-icon sm:w-[40px] md:w-[60px] flex flex-col items-center">
+              <article
+                key={eachRuntime.name}
+                className="each-runtime__icon w-[80px] h-[100px] flex flex-col items-center"
+              >
                 <img
-                  key={eachRuntime.name}
                   src={eachRuntime.icon}
-                  alt={eachRuntime.name}
-                  className="lib-framework__image w-full h-auto object-contain"
+                  alt={`Logotypen för ${eachRuntime.name}`}
+                  className="each-runtime__image w-[40px] h-[40px] md:w-[50px] md:h-[50px] lg:w-[60px] lg:h-[60px] object-contain"
                 />
-                <p className="lib-framework__name text-center text-sm">
+                <p className="each-runtime__name text-center text-md">
                   {eachRuntime.name}
                 </p>
               </article>
