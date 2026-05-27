@@ -10,9 +10,9 @@ const About = () => {
   const isVisible = useIsVisible(ref);
 
   return (
-    <section className="about p-6 flex flex-col" id="About" ref={ref}>
-      <article className="about__container flex flex-col lg:flex-row">
-        <div className="about__image-container lg:w-1/2 flex self-center">
+    <section className="about p-6 flex flex-col txt-dark" id="About" ref={ref}>
+      <article className="about__container flex flex-col md:flex-row">
+        <div className="about__image-container md:w-1/2 flex self-center">
           {/* Bild 1 */}
           <img
             src={naturePic}
@@ -21,7 +21,7 @@ const About = () => {
           />
 
           {/* Bild-container */}
-          <div className="about__right-image-container flex flex-col gap-2 lg:w-1/2">
+          <div className="about__right-image-container flex flex-col gap-2 md:w-1/2">
             {/* Bild 2 */}
             <img
               src={cowboyPic}
@@ -38,12 +38,12 @@ const About = () => {
           </div>
         </div>
 
-        <section className="about__text-container lg:w-1/2 flex flex-col self-center">
-          <h2 className="font-bold txt-dark text-center bg-fair rounded-2xl inline">
+        <section className="about__text-container md:w-1/2 flex flex-col self-center">
+          <h2 className="font-bold text-center rounded-2xl inline txt-dark">
             Hejsan!
           </h2>
           <section className="about__text-background bg-sand-opacity">
-            <p className="txt-dark leading-relaxed text-left">
+            <p className="leading-relaxed text-left">
               Jag heter Minna och är en nyfiken, blivande webbutvecklare. Jag
               brinner för tillgänglighet och användarvänlighet, då alla ska
               kunna använda webben utan svårigheter, oavsett förutsättningar.

@@ -10,20 +10,20 @@ const Thesis = () => {
 
   return (
     <section
-      className={`thesis flex flex-col max-w-[1126px] mx-auto gap-8  overflow-hidden transition-opacity ease-in duration-700 ${isVisible ? "opacity-100" : "opacity-0"}`}
+      className={`thesis txt-dark flex flex-col max-w-[1126px] mx-auto gap-8 overflow-hidden transition-opacity ease-in duration-700 ${isVisible ? "opacity-100" : "opacity-0"}`}
       ref={ref}
     >
       <div className="thesis__flex-container flex flex-col lg:flex-row items-start gap-[2rem]">
         <div className="thesis__text-container flex-1 self-center">
           <section className="thesis__text-background bg-sand-opacity">
-            <h2 className="thesis__title txt-dark font-bold">
+            <h2 className="thesis__title font-bold txt-dark">
               Företags och organisationers digitala miljöpåverkan
             </h2>
-            <h3 className="thesis__sub-title txt-dark font-light">
+            <h3 className="thesis__sub-title font-light">
               En undersökning med fokus på grafiska element inom hållbar
               webbdesign
             </h3>
-            <p className="thesis__desc txt-dark text-left">
+            <p className="thesis__desc text-left">
               Mitt examensarbete undersökte huruvida företag och organisationer
               arbetar med hållbar webbdesign och om de var intresserade av att
               göra det ifall de inte redan gjorde det. En huvudmetod som
@@ -32,7 +32,7 @@ const Thesis = () => {
               webbsida förbrukar.
             </p>
             <br />
-            <p className="txt-dark text-center">
+            <p className="text-center">
               <span className="">Länk till min kandidatuppsats: </span>
               <a
                 href="https://urn.kb.se/resolve?urn=urn:nbn:se:kau:diva-106881"
@@ -50,7 +50,7 @@ const Thesis = () => {
         />
         <ThesisCarousel />
       </div>
-      <img src={DoodleThree} alt="" className="mb-[2rem]" />
+      <img src={DoodleThree} alt="" aria-hidden="true" className="mb-[2rem]" />
     </section>
   );
 };

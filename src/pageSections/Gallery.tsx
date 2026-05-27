@@ -5,7 +5,7 @@ const Gallery = () => {
   return (
     <section className="gallery bg-sage rounded-2xl py-[2rem] flex flex-col gap-[3rem]">
       <h2 className="gallery__title">Mina projekt</h2>
-      <img src={DoodleTwo} alt="" />
+      <img src={DoodleTwo} alt="" aria-hidden="true" />
       <GalleryCarousel />
     </section>
   );
