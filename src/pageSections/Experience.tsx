@@ -11,7 +11,7 @@ const Experience = () => {
   const isVisible = useIsVisible(ref);
 
   return (
-    <section className="experience bg-sand rounded-2xl txt-dark">
+    <section className="experience bg-sand rounded-2xl txt-dark flex-col lg:flex-row">
       <h2 className="tech-title txt-dark pt-[2rem] pb-[1rem]">
         Programmeringsspråk / webbtekniker
       </h2>
@@ -89,7 +89,9 @@ const Experience = () => {
           <h2 className="lib-frameworks-title txt-dark pt-[2rem]">
             Designverktyg
           </h2>
-          <section className="lib-frameworks-icons flex gap-[2rem] justify-center">
+          <section
+            className={`lib-frameworks-icons flex gap-[2rem] justify-center transition-opacity ease-in duration-700 ${isVisible ? "opacity-100" : "opacity-0"}`}
+          >
             {designTools.map((designTool) => (
               <article className="lib-framework-icon sm:w-[40px] md:w-[60px] flex flex-col items-center">
                 <img
@@ -110,7 +112,9 @@ const Experience = () => {
           <h2 className="lib-frameworks-title txt-dark pt-[2rem]">
             JavaScript-runtime
           </h2>
-          <section className="lib-frameworks-icons flex gap-[2rem] justify-center">
+          <section
+            className={`lib-frameworks-icons flex gap-[2rem] justify-center transition-opacity ease-in duration-700 ${isVisible ? "opacity-100" : "opacity-0"}`}
+          >
             {runtime.map((eachRuntime) => (
               <article className="lib-framework-icon sm:w-[40px] md:w-[60px] flex flex-col items-center">
                 <img

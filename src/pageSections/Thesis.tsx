@@ -1,5 +1,6 @@
 import ThesisCarousel from "../components/ThesisCarousel";
 import DoodleThree from "../assets/images/doodle-3.png";
+import GraduationPic from "../assets/images/graduation.png";
 import { useIsVisible } from "../hooks/useIsVisible";
 import { useRef } from "react";
 
@@ -12,8 +13,8 @@ const Thesis = () => {
       className={`thesis flex flex-col max-w-[1126px] mx-auto gap-8  overflow-hidden transition-opacity ease-in duration-700 ${isVisible ? "opacity-100" : "opacity-0"}`}
       ref={ref}
     >
-      <div className="thesis__flex-container flex gap-[2rem]">
-        <div className="thesis__text-container flex-1">
+      <div className="thesis__flex-container flex flex-col lg:flex-row items-start gap-[2rem]">
+        <div className="thesis__text-container flex-1 self-center">
           <section className="thesis__text-background bg-sand-opacity">
             <h2 className="thesis__title txt-dark font-bold">
               Företags och organisationers digitala miljöpåverkan
@@ -30,19 +31,25 @@ const Thesis = () => {
               tagit fram, som analyserar mängden koldioxidutsläpp som en
               webbsida förbrukar.
             </p>
+            <br />
+            <p className="txt-dark text-center">
+              <span className="">Länk till min kandidatuppsats: </span>
+              <a
+                href="https://urn.kb.se/resolve?urn=urn:nbn:se:kau:diva-106881"
+                className="thesis__link underline txt-black"
+              >
+                https://urn.kb.se/resolve?urn=urn:nbn:se:kau:diva-106881
+              </a>
+            </p>
           </section>
         </div>
+        <img
+          src={GraduationPic}
+          alt="Jag står och ler glatt med mitt glasäpple i handen, efter att ha tagit examen"
+          className="max-w-[200px] rounded-[100%] w-full h-auto self-center"
+        />
         <ThesisCarousel />
       </div>
-      <p className="thesis__link-text txt-dark bg-sand-opacity">
-        Länk till min kandidatuppsats:{" "}
-        <a
-          href="https://urn.kb.se/resolve?urn=urn:nbn:se:kau:diva-106881"
-          className="thesis__link underline txt-black"
-        >
-          https://urn.kb.se/resolve?urn=urn:nbn:se:kau:diva-106881
-        </a>
-      </p>
       <img src={DoodleThree} alt="" className="mb-[2rem]" />
     </section>
   );

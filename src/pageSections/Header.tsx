@@ -6,16 +6,16 @@ import { motion } from "motion/react";
 
 const Header = () => {
   return (
-    <header className="header flex justify-center w-full min-h-[40vh] relative">
+    <header className="header justify-center w-full relative min-h-screen">
       <div className="header__container flex items-center justify-center">
         {/* bakgrundsbild */}
         <img
           src={headerBackground}
           alt="Bakgrundsbild för headern"
-          className="w-full h-auto object-contain aria-hidden"
+          className="absolute inset-0 w-full h-full"
         />
 
-        <div className="header-container absolute inset-0 z-10 flex items-center justify-center h-[20rem] mt-[10rem] w-[80%] justify-self-center">
+        <div className="header-container absolute inset-0 z-10 flex flex-col lg:flex-row items-center justify-center h-[20rem] mt-[10rem] w-[80%] justify-self-center">
           {/* profilbild */}
           <motion.img
             src={profilePic}
@@ -31,7 +31,7 @@ const Header = () => {
             <motion.img
               src={staircase}
               alt="Textdekoration"
-              className="header__detail row-span-3 col-start-1 object-contain max-h-[7rem]"
+              className="header__detail row-span-3 col-start-1 object-contain max-h-[7rem] invisible lg:visible"
               initial={{ scale: 0 }}
               animate={{ scale: 1 }}
             />

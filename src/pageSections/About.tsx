@@ -10,9 +10,9 @@ const About = () => {
   const isVisible = useIsVisible(ref);
 
   return (
-    <section className="about gap-6 p-6 flex flex-col" id="About" ref={ref}>
-      <article className="about__container flex">
-        <div className="about__image-container w-1/2 flex">
+    <section className="about p-6 flex flex-col" id="About" ref={ref}>
+      <article className="about__container flex flex-col lg:flex-row">
+        <div className="about__image-container lg:w-1/2 flex self-center">
           {/* Bild 1 */}
           <img
             src={naturePic}
@@ -21,7 +21,7 @@ const About = () => {
           />
 
           {/* Bild-container */}
-          <div className="about__right-image-container flex flex-col gap-2 w-1/2">
+          <div className="about__right-image-container flex flex-col gap-2 lg:w-1/2">
             {/* Bild 2 */}
             <img
               src={cowboyPic}
@@ -38,8 +38,10 @@ const About = () => {
           </div>
         </div>
 
-        <section className="about__text-container w-1/2 flex flex-col">
-          <h2 className="font-bold txt-dark text-left">Hejsan!</h2>
+        <section className="about__text-container lg:w-1/2 flex flex-col self-center">
+          <h2 className="font-bold txt-dark text-center bg-fair rounded-2xl inline">
+            Hejsan!
+          </h2>
           <section className="about__text-background bg-sand-opacity">
             <p className="txt-dark leading-relaxed text-left">
               Jag heter Minna och är en nyfiken, blivande webbutvecklare. Jag
