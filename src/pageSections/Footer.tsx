@@ -16,10 +16,10 @@ const Footer = () => {
             alt="GitHub:s logotyp"
             className="social__icon w-[40px] h-[40px] md:w-[50px] md:h-[50px] lg:w-[60px] lg:h-[60px]"
           />
-          <p className="social__name font-title size-desc">GitHub</p>
+          <h2 className="social__name font-title size-desc">GitHub</h2>
         </a>
         <a
-          href="www.linkedin.com/in/minna-hedell-6a20b72b5"
+          href="https://www.linkedin.com/in/minna-hedell-6a20b72b5/"
           className="social flex flex-col items-center bg-sand rounded-lg p-[.5rem]"
         >
           <img
@@ -27,7 +27,7 @@ const Footer = () => {
             alt="LinkedIn:s logotyp"
             className="social__icon w-[40px] h-[40px] md:w-[50px] md:h-[50px] lg:w-[60px] lg:h-[60px]"
           />
-          <p className="social__name font-title size-desc">LinkedIn</p>
+          <h2 className="social__name font-title size-desc">LinkedIn</h2>
         </a>
       </section>
     </footer>
