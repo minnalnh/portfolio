@@ -49,8 +49,11 @@ const About = () => {
           <section className="about__text-background bg-sand-opacity shadow-black/30 shadow-lg">
             <p className="leading-relaxed text-left font-desc">
               Jag heter Minna och är en nyfiken, blivande webbutvecklare. Jag
-              brinner för tillgänglighet och användarvänlighet, då alla ska
-              kunna använda webben utan svårigheter, oavsett förutsättningar.
+              brinner för tillgänglighet och användarvänlighet, eftersom alla
+              ska kunna använda webben utan svårigheter, oavsett
+              förutsättningar. Dessutom bidrar tillgänglighet till att göra
+              webben mer användarvänlig för alla, vilket jag ser som en
+              självklar och viktig faktor i webbutveckling.
               <br />
               <br />
               Ett område som jag introducerades till nyligen är hållbar
