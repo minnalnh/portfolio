@@ -15,15 +15,15 @@ const Thesis = () => {
     >
       <div className="thesis__flex-container flex flex-col lg:flex-row items-start gap-[2rem]">
         <div className="thesis__text-container flex-1 self-center">
-          <section className="thesis__text-background bg-sand-opacity">
-            <h2 className="thesis__title font-bold txt-dark">
-              Företags och organisationers digitala miljöpåverkan
-            </h2>
-            <h3 className="thesis__sub-title font-light">
-              En undersökning med fokus på grafiska element inom hållbar
-              webbdesign
-            </h3>
-            <p className="thesis__desc text-left">
+          <h2 className="thesis__title font-bold txt-dark font-title size-sub-title">
+            Företags och organisationers digitala miljöpåverkan
+          </h2>
+          <h3 className="thesis__sub-title font-light font-desc mb-[1rem] size-desc">
+            – En undersökning med fokus på grafiska element inom hållbar
+            webbdesign
+          </h3>
+          <section className="thesis__text-background bg-sand-opacity shadow-black/30 shadow-lg">
+            <p className="thesis__desc text-left font-desc">
               Mitt examensarbete undersökte huruvida företag och organisationer
               arbetar med hållbar webbdesign och om de var intresserade av att
               göra det ifall de inte redan gjorde det. En huvudmetod som
@@ -33,10 +33,10 @@ const Thesis = () => {
             </p>
             <br />
             <p className="text-center">
-              <span className="">Länk till min kandidatuppsats: </span>
+              <span className="font-desc">Länk till min kandidatuppsats: </span>
               <a
                 href="https://urn.kb.se/resolve?urn=urn:nbn:se:kau:diva-106881"
-                className="thesis__link underline txt-black"
+                className="thesis__link underline txt-black font-desc"
               >
                 https://urn.kb.se/resolve?urn=urn:nbn:se:kau:diva-106881
               </a>

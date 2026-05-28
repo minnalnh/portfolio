@@ -1,12 +1,13 @@
 type ThesisImageProps = {
   image: string;
+  alt: string;
 };
 
-const ThesisImage = ({ image }: ThesisImageProps) => {
+const ThesisImage = ({ image, alt }: ThesisImageProps) => {
   return (
     <img
       src={image}
-      alt="Sida ur min kandidatuppsats"
+      alt={alt}
       className="thesis-image w-full h-full flex-shrink-0 object-cover"
     />
   );

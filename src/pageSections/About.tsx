@@ -4,6 +4,7 @@ import cafePic from "../assets/images/cafe-pic.png";
 import doodle from "../assets/images/doodle.png";
 import { useRef } from "react";
 import { useIsVisible } from "../hooks/useIsVisible";
+import { Sun } from "lucide-react";
 
 const About = () => {
   const ref = useRef<HTMLDivElement>(null);
@@ -39,11 +40,14 @@ const About = () => {
         </div>
 
         <section className="about__text-container md:w-1/2 flex flex-col self-center">
-          <h2 className="font-bold text-center rounded-2xl inline txt-dark">
-            Hejsan!
-          </h2>
-          <section className="about__text-background bg-sand-opacity">
-            <p className="leading-relaxed text-left">
+          <div className="about__title-container mx-auto mb-[1rem] flex gap-[.5rem]">
+            <h2 className="font-bold rounded-2xl inline txt-dark font-title size-title">
+              Hejsan!
+            </h2>
+            <Sun size={40} strokeWidth={1.5} />
+          </div>
+          <section className="about__text-background bg-sand-opacity shadow-black/30 shadow-lg">
+            <p className="leading-relaxed text-left font-desc">
               Jag heter Minna och är en nyfiken, blivande webbutvecklare. Jag
               brinner för tillgänglighet och användarvänlighet, då alla ska
               kunna använda webben utan svårigheter, oavsett förutsättningar.
@@ -59,8 +63,9 @@ const About = () => {
       </article>
       <img
         src={doodle}
-        alt="Bild på mig som cowboy"
-        className="h-1/3 object-contain"
+        alt=""
+        aria-hidden="true"
+        className="max-h-[200px] object-contain mt-[2rem] lg:mt-0"
       />
     </section>
   );
