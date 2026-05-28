@@ -13,7 +13,7 @@ const Footer = () => {
         >
           <img
             src={GitHub}
-            alt="GitHubs logotyp"
+            alt="GitHub:s logotyp"
             className="social__icon w-[40px] h-[40px] md:w-[50px] md:h-[50px] lg:w-[60px] lg:h-[60px]"
           />
           <p className="social__name font-title size-desc">GitHub</p>
@@ -24,7 +24,7 @@ const Footer = () => {
         >
           <img
             src={LinkedIn}
-            alt="GitHubs logotyp"
+            alt="LinkedIn:s logotyp"
             className="social__icon w-[40px] h-[40px] md:w-[50px] md:h-[50px] lg:w-[60px] lg:h-[60px]"
           />
           <p className="social__name font-title size-desc">LinkedIn</p>
