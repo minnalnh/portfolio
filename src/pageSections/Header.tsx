@@ -11,7 +11,8 @@ const Header = () => {
         {/* bakgrundsbild */}
         <img
           src={headerBackground}
-          alt="Bakgrundsbild för headern"
+          alt=""
+          aria-hidden="true"
           className="absolute inset-0 w-full h-full"
         />
 
@@ -39,7 +40,7 @@ const Header = () => {
 
             {/* titel */}
             <motion.h1
-              className="text-2xl font-semibold text-white col-start-2 col-span-3 row-start-2 leading-tight"
+              className="text-2xl font-semibold text-white col-start-2 col-span-3 row-start-2 leading-tight font-title bg-sage"
               initial={{ scale: 0 }}
               animate={{ scale: 1 }}
             >
@@ -49,7 +50,7 @@ const Header = () => {
 
             {/* undertitel */}
             <motion.h2
-              className="text-sm txt-sand col-start-2 col-span-4 row-start-3"
+              className="txt-light col-start-2 col-span-4 row-start-3 font-desc bg-sage"
               initial={{ scale: 0 }}
               animate={{ scale: 1 }}
             >

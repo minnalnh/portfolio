@@ -18,21 +18,9 @@ const GalleryCarousel = () => {
 
   return (
     <section
-      className={`gallery-carousel transition-opacity ease-in duration-700 ${isVisible ? "opacity-100" : "opacity-0"}`}
+      className={`gallery-carousel transition-opacity min-h-screen ease-in duration-700 ${isVisible ? "opacity-100" : "opacity-0"}`}
       ref={ref}
     >
-      <section className="project txt-light">
-        <h2 className="project__title txt-light">
-          {galleryItems[activeIndex].title}
-        </h2>
-        <p className="project__desc">{galleryItems[activeIndex].desc}</p>
-        <p className="project__link">
-          Länk till projektet:{" "}
-          <a href={galleryItems[activeIndex].link} className="underline">
-            {galleryItems[activeIndex].link}
-          </a>
-        </p>
-      </section>
       <Swiper
         effect={"coverflow"}
         grabCursor={true}
@@ -46,7 +34,6 @@ const GalleryCarousel = () => {
           slideShadows: true,
         }}
         onSlideChange={(swiper) => setActiveIndex(swiper.realIndex)}
-        pagination={true}
         modules={[EffectCoverflow, Pagination]}
         className="mySwiper w-full max-w-[900px] w-[100%] py-[50px]"
       >
@@ -60,6 +47,24 @@ const GalleryCarousel = () => {
           </SwiperSlide>
         ))}
       </Swiper>
+      <section className="project txt-light mt-[3rem]">
+        <h2 className="project__title txt-light font-title size-sub-title pb-[1rem]">
+          {galleryItems[activeIndex].title}
+        </h2>
+        <p className="project__desc font-desc size-desc px-[5rem] text-left">
+          {galleryItems[activeIndex].desc}
+        </p>
+        <br />
+        <p className="project__link-text font-desc size-desc text-left px-[5rem]">
+          Länk till projektet:{" "}
+          <a
+            href={galleryItems[activeIndex].link}
+            className="project__link underline"
+          >
+            {galleryItems[activeIndex].link}
+          </a>
+        </p>
+      </section>
     </section>
   );
 };

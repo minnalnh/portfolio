@@ -1,5 +1,5 @@
-import C from "../../assets/icons/c.svg";
-import CSharp from "../../assets/icons/c-sharp.svg";
+import C from "../../assets/icons/c.png";
+import CSharp from "../../assets/icons/c-sharp.png";
 import CSS3 from "../../assets/icons/css3.svg";
 import Figma from "../../assets/icons/figma.svg";
 import HTML5 from "../../assets/icons/html5.svg";

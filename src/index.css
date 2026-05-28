@@ -1,4 +1,5 @@
 @import "tailwindcss";
+@import url("https://fonts.googleapis.com/css2?family=Concert+One&family=Radio+Canada:ital,wght@0,300..700;1,300..700&display=swap");
 
 :root {
   --sage: #424937;
@@ -6,6 +7,9 @@
   --blush: #ae6b6b;
   --fair: #f9ddd8;
   --sand: #faf8f5;
+
+  --font-title: "Concert One", sans-serif;
+  --font-desc: "Radio Canada", sans-serif;
 
   --sans: system-ui, "Segoe UI", Roboto, sans-serif;
   --heading: system-ui, "Segoe UI", Roboto, sans-serif;
@@ -24,6 +28,42 @@
   @media (max-width: 1024px) {
     font-size: 16px;
   }
+}
+
+.thesis__link:hover {
+  background-color: var(--sage);
+  color: var(--sand);
+  border-radius: 3px;
+}
+
+.social:hover {
+  background-color: var(--fair);
+  border: 5px solid black;
+}
+
+.project__link:hover {
+  background-color: var(--fair);
+  color: #000;
+}
+
+.font-title {
+  font-family: var(--font-title);
+}
+
+.size-title {
+  font-size: 2rem;
+}
+
+.size-sub-title {
+  font-size: 1.5rem;
+}
+
+.size-desc {
+  font-size: 1.2rem;
+}
+
+.font-desc {
+  font-family: var(--font-desc);
 }
 
 .bg-sage {
@@ -57,7 +97,7 @@
 }
 
 .txt-light {
-  color: #fff;
+  color: var(--sand);
 }
 
 body {

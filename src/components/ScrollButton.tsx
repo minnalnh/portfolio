@@ -9,14 +9,16 @@ const ScrollButton = () => {
   return (
     <motion.button
       onClick={scrollToAbout}
-      className={`scroll-button txt-dark flex flex-col z-100 p-[1rem] bg-fair fixed bottom-10 left-1/2 -translate-x-1/2 rounded-full flex justify-center items-center transition-opacity duration-500 cursor-pointer ${scrollY > 100 ? "opacity-0 pointer-events-none" : "opacity-100"}`}
+      className={`scroll-button txt-dark shadow-black/30 shadow-lg flex z-100 gap-[.5rem] p-[1rem] bg-fair fixed bottom-10 left-1/2 -translate-x-1/2 rounded-full flex justify-center items-center transition-opacity duration-500 cursor-pointer ${scrollY > 100 ? "opacity-0 pointer-events-none" : "opacity-100"}`}
       initial={{ scale: 0 }}
       animate={{ scale: 1 }}
       whileHover={{ scale: 1.1 }}
       whileTap={{ scale: 0.95 }}
     >
-      <span>Läs mer om mig</span>
-      <ArrowDown size={40} />
+      <span className="scroll-button__text font-title size-sub-title">
+        Mer om mig
+      </span>
+      <ArrowDown size={30} />
     </motion.button>
   );
 };
