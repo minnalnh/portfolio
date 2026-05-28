@@ -3,16 +3,21 @@ import Layout from "../components/Layout";
 import About from "../pageSections/About";
 import ErrorPage from "../pageSections/ErrorPage";
 
-export const router = createBrowserRouter([
+export const router = createBrowserRouter(
+  [
+    {
+      path: "/",
+      element: <Layout />,
+      errorElement: <ErrorPage />,
+      children: [
+        {
+          index: true,
+          element: <About />,
+        },
+      ],
+    },
+  ],
   {
-    path: "/portfolio",
-    element: <Layout />,
-    errorElement: <ErrorPage />,
-    children: [
-      {
-        index: true,
-        element: <About />,
-      },
-    ],
+    basename: "/portfolio",
   },
-]);
+);
