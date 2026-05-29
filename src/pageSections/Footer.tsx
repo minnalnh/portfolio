@@ -1,6 +1,5 @@
 import DecorationFour from "../assets/images/decoration-4.png";
 import GitHub from "../assets/icons/github.svg";
-import LinkedIn from "../assets/icons/linkedin.svg";
 
 const Footer = () => {
   return (
