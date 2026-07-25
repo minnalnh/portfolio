@@ -51,11 +51,11 @@ const GalleryCarousel = () => {
         <h2 className="project__title txt-light font-title size-sub-title pb-[1rem]">
           {galleryItems[activeIndex].title}
         </h2>
-        <p className="project__desc font-desc size-desc px-[5rem] text-left">
+        <p className="project__desc font-desc size-desc text-center">
           {galleryItems[activeIndex].desc}
         </p>
         <br />
-        <p className="project__link-text font-desc size-desc text-left px-[5rem]">
+        <p className="project__link-text font-desc size-desc text-center">
           Länk till projektet:{" "}
           <a
             href={galleryItems[activeIndex].link}

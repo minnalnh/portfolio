@@ -53,7 +53,7 @@ export const galleryItems = [
     image: Givly,
     title: "Givly",
     alt: "Skiss för en webbapplikation för Givly.",
-    desc: "Skiss för en webbapplikation för det påhittade företaget Givly. Tanken är att applikationen ska användas.",
+    desc: "Skiss för en webbapplikation för det påhittade företaget Givly. Applikationen ska ge förslag på vad man kan köpa i present, baserat på sammanhanget.",
     link: "https://www.figma.com/proto/e7WRReggduuvyYevabgVSO/Givly?node-id=118-17&t=LQcOoaMExQZcIevX-1",
   },
 ];
