@@ -11,10 +11,11 @@ const Languages = () => {
           <MessageCircle size={25} strokeWidth={1.5} className="mb-[1rem]" />
         </div>
         <h3 className="languages__swedish font-desc size-desc pb-[1rem]">
-          Svenska – modersmål
+          <span className="font-bold">Svenska</span> – modersmål
         </h3>
         <h3 className="languages__english font-desc size-desc">
-          Engelska – mycket goda kunskaper i tal och skrift
+          <span className="font-bold">Engelska</span> – mycket goda kunskaper i
+          tal och skrift
         </h3>
       </section>
     </section>
