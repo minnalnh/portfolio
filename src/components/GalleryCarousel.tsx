@@ -51,7 +51,7 @@ const GalleryCarousel = () => {
         <h2 className="project__title txt-light font-title size-sub-title pb-[1rem]">
           {galleryItems[activeIndex].title}
         </h2>
-        <p className="project__desc font-desc size-desc text-center">
+        <p className="project__desc font-desc size-desc text-center px-[1rem]">
           {galleryItems[activeIndex].desc}
         </p>
         <br />
