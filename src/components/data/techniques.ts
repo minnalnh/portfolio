@@ -21,7 +21,7 @@ export const techniques = [
   { name: "CSS3", icon: CSS3 },
   { name: "HTML5", icon: HTML5 },
   { name: "Java", icon: Java },
-  { name: "JavaScript", icon: JavaScript },
+  // { name: "JavaScript", icon: JavaScript },
   { name: "PHP", icon: PHP },
   { name: "TypeScript", icon: TypeScript },
   { name: "Tailwind", icon: Tailwind },

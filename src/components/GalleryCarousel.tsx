@@ -9,12 +9,14 @@ import "swiper/css/effect-coverflow";
 import "swiper/css/pagination";
 
 import { galleryItems } from "./data/galleryItems";
+import { SpringModal } from "./SpringModal";
 
 const GalleryCarousel = () => {
   const ref = useRef<HTMLDivElement>(null);
   const isVisible = useIsVisible(ref);
 
   const [activeIndex, setActiveIndex] = useState(0);
+  const [modalOpen, setModalOpen] = useState(false);
 
   return (
     <section
@@ -26,6 +28,7 @@ const GalleryCarousel = () => {
         grabCursor={true}
         centeredSlides={true}
         slidesPerView={"auto"}
+        spaceBetween={30}
         coverflowEffect={{
           rotate: 50,
           stretch: 0,
@@ -34,6 +37,7 @@ const GalleryCarousel = () => {
           slideShadows: true,
         }}
         onSlideChange={(swiper) => setActiveIndex(swiper.realIndex)}
+        onClick={() => setModalOpen(true)}
         modules={[EffectCoverflow, Pagination]}
         className="mySwiper w-full max-w-[900px] w-[100%] py-[50px]"
       >
@@ -42,7 +46,7 @@ const GalleryCarousel = () => {
             <img
               src={item.image}
               alt={item.alt}
-              className="h-[500px] w-full object-cover rounded-xl"
+              className="h-[500px] w-full object-cover rounded-xl cursor-pointer"
             />
           </SwiperSlide>
         ))}
@@ -65,6 +69,11 @@ const GalleryCarousel = () => {
           </a>
         </p>
       </section>
+      <SpringModal
+        open={modalOpen}
+        handleClose={() => setModalOpen(false)}
+        item={galleryItems[activeIndex]}
+      />
     </section>
   );
 };
