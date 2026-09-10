@@ -54,7 +54,7 @@ const Header = () => {
               initial={{ scale: 0 }}
               animate={{ scale: 1 }}
             >
-              – Junior webbutvecklare med tillgänglighetsintresse
+              – Junior webbutvecklare med moln- och tillgänglighetsintresse
             </motion.h2>
           </div>
         </div>
