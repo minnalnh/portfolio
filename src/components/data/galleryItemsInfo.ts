@@ -1,12 +1,12 @@
 import BonzAi from "../../assets/gallery/bonz-ai.png";
 import NeonCinema from "../../assets/gallery/neon-cinema.png";
 import Stickan from "../../assets/gallery/stickan.png";
-import WhereItsAt from "../../assets/gallery/where-its-at.png";
+//import WhereItsAt from "../../assets/gallery/";
 import YumYumGimmieSum from "../../assets/gallery/yum-yum-gimmie-sum.png";
 import MovieDatabase from "../../assets/gallery/movie-database.png";
 import Givly from "../../assets/gallery/givly.png";
 
-export const galleryItems = [
+export const galleryItemsInfo = [
   {
     image: BonzAi,
     title: "Bonz.ai",

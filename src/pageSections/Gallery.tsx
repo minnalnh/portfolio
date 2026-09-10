@@ -1,5 +1,5 @@
 import GalleryCarousel from "../components/GalleryCarousel";
-import DoodleTwo from "../assets/images/doodle-2.png";
+import DoodleTwo from "../assets/dividers/doodle-2.png";
 
 const Gallery = () => {
   return (

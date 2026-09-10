@@ -1,7 +1,7 @@
 import naturePic from "../assets/images/nature-pic.png";
 import cowboyPic from "../assets/images/cowboy-pic.png";
 import cafePic from "../assets/images/cafe-pic.png";
-import doodle from "../assets/images/doodle.png";
+import doodle from "../assets/dividers/doodle.png";
 import { useRef } from "react";
 import { useIsVisible } from "../hooks/useIsVisible";
 import { Sun } from "lucide-react";

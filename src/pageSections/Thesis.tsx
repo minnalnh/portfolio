@@ -1,5 +1,5 @@
 import ThesisCarousel from "../components/ThesisCarousel";
-import DoodleThree from "../assets/images/doodle-3.png";
+import DoodleThree from "../assets/decorations/doodle-3.png";
 import GraduationPic from "../assets/images/graduation.png";
 import { useIsVisible } from "../hooks/useIsVisible";
 import { useRef } from "react";

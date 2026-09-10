@@ -1,6 +1,6 @@
-import thesisCover from "../../assets/images/thesis-cover.png";
-import thesisDevTools from "../../assets/images/thesis-dev-tools.png";
-import thesisSustainableTech from "../../assets/images/thesis-sustainable-tech.png";
+import thesisCover from "../../assets/thesis/thesis-cover.png";
+import thesisDevTools from "../../assets/thesis/thesis-dev-tools.png";
+import thesisSustainableTech from "../../assets/thesis/thesis-sustainable-tech.png";
 
 export const thesisPages = [
   {

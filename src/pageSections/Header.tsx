@@ -1,5 +1,5 @@
 import profilePic from "../assets/images/profile-pic.png";
-import staircase from "../assets/images/staircase.png";
+import staircase from "../assets/header/staircase.png";
 import ScrollButton from "../components/ScrollButton";
 import headerBackground from "../assets/images/header-background.png";
 import { motion } from "motion/react";

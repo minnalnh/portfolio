@@ -5,6 +5,8 @@ import Modal from "@mui/material/Modal";
 import Typography from "@mui/material/Typography";
 import { useSpring, animated } from "@react-spring/web";
 
+import { galleryItemsInfo } from "./data/galleryItemsInfo";
+
 interface SpringModalProps {
   open: boolean;
   handleClose: () => void;

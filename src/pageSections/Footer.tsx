@@ -1,4 +1,4 @@
-import DecorationFour from "../assets/images/decoration-4.png";
+import DecorationFour from "../assets/dividers/decoration-4.png";
 import GitHub from "../assets/icons/github.svg";
 
 const Footer = () => {
