@@ -4,6 +4,7 @@ import {
   designTools,
   libFrameworks,
   cms,
+  cloudplatform,
 } from "../components/data/techniques";
 import { useIsVisible } from "../hooks/useIsVisible";
 import { useRef } from "react";
@@ -135,6 +136,34 @@ const Experience = () => {
                 />
                 <p className="each-runtime__name text-center text-md">
                   {eachRuntime.name}
+                </p>
+              </article>
+            ))}
+          </section>
+        </section>
+      </div>
+      <hr />
+      <div className="fourth-row-container flex justify-center">
+        <section className="cloud-platform">
+          <h2 className="cms-title pt-[1rem] pb-[1rem] txt-dark size-sub-title font-title">
+            Molnplattform
+          </h2>
+          <section
+            className={`cloud-platform__icons flex flex-wrap gap-[2rem] font-desc justify-center transition-opacity ease-in duration-700 ${isVisible ? "opacity-100" : "opacity-0"}`}
+            ref={ref}
+          >
+            {cloudplatform.map((eachCloudplatform) => (
+              <article
+                key={eachCloudplatform.name}
+                className="cms__icon w-[80px] h-[100px] flex flex-col items-center"
+              >
+                <img
+                  src={eachCloudplatform.icon}
+                  alt={`Logotypen för ${eachCloudplatform.name}`}
+                  className="cms__image w-[40px] h-[40px] md:w-[50px] md:h-[50px] lg:w-[60px] lg:h-[60px] object-contain"
+                />
+                <p className="cms__name text-center text-md">
+                  {eachCloudplatform.name}
                 </p>
               </article>
             ))}
