@@ -12,29 +12,35 @@ const About = () => {
 
   return (
     <section className="about p-6 flex flex-col txt-dark" id="About" ref={ref}>
-      <article className="about__container flex flex-col md:flex-row">
-        <div className="about__image-container md:w-1/2 flex self-center">
+      <article className="about__container flex flex-col-reverse md:flex-row">
+        <div className="about__image-container flex w-[45%] md:w-1/2 mx-auto flex-col md:flex-row self-center lg:mr-[1rem] md:mr-[1rem]">
           {/* Bild 1 */}
           <img
             src={naturePic}
             alt="Jag står vid en sjö i naturen"
-            className={`about__nature-pic w-1/2 h-full object-contain transition-opacity ease-in duration-700 ${isVisible ? "opacity-100" : "opacity-0"}`}
+            className={`about__nature-pic w-full md:w-1/2 h-auto md:h-full object-contain transition-opacity ease-in duration-700 ${
+              isVisible ? "opacity-100" : "opacity-0"
+            }`}
           />
 
           {/* Bild-container */}
-          <div className="about__right-image-container flex flex-col gap-2 md:w-1/2">
+          <div className="about__right-image-container flex flex-col gap-2 w-full md:w-1/2">
             {/* Bild 2 */}
             <img
               src={cowboyPic}
               alt="Jag är utklädd till cowboy"
-              className={`h-1/3 object-contain transition-opacity ease-in duration-800 ${isVisible ? "opacity-100" : "opacity-0"}`}
+              className={`w-full h-auto md:h-1/2 object-contain transition-opacity ease-in duration-800 ${
+                isVisible ? "opacity-100" : "opacity-0"
+              }`}
             />
 
             {/* Bild 3 */}
             <img
               src={cafePic}
               alt="Jag dricker kaffe på ett café"
-              className={`h-1/3 object-contain transition-opacity ease-in duration-900 ${isVisible ? "opacity-100" : "opacity-0"}`}
+              className={`w-full h-auto md:h-1/2 object-contain transition-opacity ease-in duration-900 ${
+                isVisible ? "opacity-100" : "opacity-0"
+              }`}
             />
           </div>
         </div>
