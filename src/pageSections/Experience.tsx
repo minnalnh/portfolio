@@ -6,12 +6,12 @@ import {
   cms,
   cloudplatform,
 } from "../components/data/techniques";
-import { useIsVisible } from "../hooks/useIsVisible";
+//import { useIsVisible } from "../hooks/useIsVisible";
 import { useRef } from "react";
 
 const Experience = () => {
   const ref = useRef<HTMLDivElement>(null);
-  const isVisible = useIsVisible(ref);
+  //const isVisible = useIsVisible(ref);
 
   return (
     <section className="tech bg-sand shadow-black/30 shadow-lg rounded-2xl txt-dark">
@@ -19,7 +19,7 @@ const Experience = () => {
         Programmeringsspråk / webbtekniker
       </h2>
       <section
-        className={`tech__icons flex flex-wrap gap-[2rem] font-desc justify-center transition-opacity ease-in duration-700 ${isVisible ? "opacity-100" : "opacity-0"}`}
+        className={`tech__icons flex flex-wrap gap-[2rem] font-desc justify-center transition-opacity ease-in duration-700`}
         ref={ref}
       >
         {techniques.map((technique) => (
@@ -44,7 +44,7 @@ const Experience = () => {
             Bibliotek / frameworks
           </h2>
           <section
-            className={`lib-framework__icons flex flex-wrap gap-[2rem] font-desc justify-center transition-opacity ease-in duration-700 ${isVisible ? "opacity-100" : "opacity-0"}`}
+            className={`lib-framework__icons flex flex-wrap gap-[2rem] font-desc justify-center transition-opacity ease-in duration-700`}
             ref={ref}
           >
             {libFrameworks.map((libFramework) => (
@@ -70,7 +70,7 @@ const Experience = () => {
             CMS
           </h2>
           <section
-            className={`cms__icons flex flex-wrap gap-[2rem] font-desc justify-center transition-opacity ease-in duration-700 ${isVisible ? "opacity-100" : "opacity-0"}`}
+            className={`cms__icons flex flex-wrap gap-[2rem] font-desc justify-center transition-opacity ease-in duration-700`}
             ref={ref}
           >
             {cms.map((eachCMS) => (
@@ -97,7 +97,7 @@ const Experience = () => {
             Designverktyg
           </h2>
           <section
-            className={`design-tool__icons flex flex-wrap font-desc gap-[2rem] justify-center transition-opacity ease-in duration-700 ${isVisible ? "opacity-100" : "opacity-0"}`}
+            className={`design-tool__icons flex flex-wrap font-desc gap-[2rem] justify-center transition-opacity ease-in duration-700`}
           >
             {designTools.map((designTool) => (
               <article
@@ -122,7 +122,7 @@ const Experience = () => {
             JavaScript-runtime
           </h2>
           <section
-            className={`each-rumtime__icons flex flex-wrap font-desc gap-[2rem] justify-center transition-opacity ease-in duration-700 ${isVisible ? "opacity-100" : "opacity-0"}`}
+            className={`each-rumtime__icons flex flex-wrap font-desc gap-[2rem] justify-center transition-opacity ease-in duration-700`}
           >
             {runtime.map((eachRuntime) => (
               <article
@@ -149,7 +149,7 @@ const Experience = () => {
             Molnplattform
           </h2>
           <section
-            className={`cloud-platform__icons flex flex-wrap gap-[2rem] font-desc justify-center transition-opacity ease-in duration-700 ${isVisible ? "opacity-100" : "opacity-0"}`}
+            className={`cloud-platform__icons flex flex-wrap gap-[2rem] font-desc justify-center transition-opacity ease-in duration-700`}
             ref={ref}
           >
             {cloudplatform.map((eachCloudplatform) => (
