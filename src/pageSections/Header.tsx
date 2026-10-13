@@ -1,7 +1,7 @@
-import profilePic from "../assets/images/profile-pic.png";
-import staircase from "../assets/images/staircase.png";
+import profilePic from "../assets/images/profile-pic.webp";
+import staircase from "../assets/images/staircase.webp";
 import ScrollButton from "../components/ScrollButton";
-import headerBackground from "../assets/images/header-background.png";
+import headerBackground from "../assets/images/header-background.webp";
 import { motion } from "motion/react";
 
 const Header = () => {

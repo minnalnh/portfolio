@@ -1,10 +1,10 @@
-import BonzAi from "../../assets/images/bonz-ai.png";
-import NeonCinema from "../../assets/images/neon-cinema.png";
-import Stickan from "../../assets/images/stickan.png";
-import WhereItsAt from "../../assets/images/where-its-at.png";
-import YumYumGimmieSum from "../../assets/images/yum-yum-gimmie-sum.png";
-import MovieDatabase from "../../assets/images/movie-database.png";
-import Givly from "../../assets/images/givly.png";
+import BonzAi from "../../assets/images/bonz-ai.webp";
+import NeonCinema from "../../assets/images/neon-cinema.webp";
+import Stickan from "../../assets/images/stickan.webp";
+import WhereItsAt from "../../assets/images/where-its-at.webp";
+import YumYumGimmieSum from "../../assets/images/yum-yum-gimmie-sum.webp";
+import MovieDatabase from "../../assets/images/movie-database.webp";
+import Givly from "../../assets/images/givly.webp";
 
 export const galleryItems = [
   {

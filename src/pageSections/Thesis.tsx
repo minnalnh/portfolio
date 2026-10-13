@@ -1,8 +1,10 @@
-import ThesisCarousel from "../components/ThesisCarousel";
-import DoodleThree from "../assets/images/doodle-3.png";
-import GraduationPic from "../assets/images/graduation.png";
+import { lazy, Suspense } from "react";
+import DoodleThree from "../assets/images/doodle-3.webp";
+import GraduationPic from "../assets/images/graduation.webp";
 import { useIsVisible } from "../hooks/useIsVisible";
 import { useRef } from "react";
+
+const ThesisCarousel = lazy(() => import("../components/ThesisCarousel"));
 
 const Thesis = () => {
   const ref = useRef<HTMLDivElement>(null);
@@ -48,7 +50,9 @@ const Thesis = () => {
           alt="Jag står och ler glatt med mitt glasäpple i handen, efter att ha tagit examen"
           className="max-w-[200px] rounded-[100%] w-full h-auto self-center"
         />
-        <ThesisCarousel />
+        <Suspense fallback={<p>Laddar karusell...</p>}>
+          <ThesisCarousel />
+        </Suspense>
       </div>
       <img src={DoodleThree} alt="" aria-hidden="true" className="mb-[2rem]" />
     </section>

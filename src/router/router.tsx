@@ -1,6 +1,5 @@
 import { createBrowserRouter } from "react-router-dom";
 import Layout from "../components/Layout";
-import About from "../pageSections/About";
 import ErrorPage from "../pageSections/ErrorPage";
 
 export const router = createBrowserRouter(
@@ -12,7 +11,12 @@ export const router = createBrowserRouter(
       children: [
         {
           index: true,
-          element: <About />,
+          lazy: async () => {
+            const { default: About } = await import("../pageSections/About");
+            return {
+              Component: About,
+            };
+          },
         },
       ],
     },

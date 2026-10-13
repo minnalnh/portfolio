@@ -12,8 +12,8 @@ const ThesisCarousel = () => {
       className="mySwiper w-full max-w-[350px] h-[500px] shadow-black/30 shadow-lg"
     >
       {thesisPages.map((page) => (
-        <SwiperSlide className="h-full overflow-hidden">
-          <ThesisImage key={page.alt} image={page.image} alt={page.alt} />
+        <SwiperSlide key={page.alt} className="h-full overflow-hidden">
+          <ThesisImage image={page.image} alt={page.alt} />
         </SwiperSlide>
       ))}
     </Swiper>

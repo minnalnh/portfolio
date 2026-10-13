@@ -1,7 +1,7 @@
-import naturePic from "../assets/images/nature-pic.png";
-import cowboyPic from "../assets/images/cowboy-pic.png";
-import cafePic from "../assets/images/cafe-pic.png";
-import doodle from "../assets/images/doodle.png";
+import naturePic from "../assets/images/nature-pic.webp";
+import cowboyPic from "../assets/images/cowboy-pic.webp";
+import cafePic from "../assets/images/cafe-pic.webp";
+import doodle from "../assets/images/doodle.webp";
 import { useRef } from "react";
 import { useIsVisible } from "../hooks/useIsVisible";
 import { Sun } from "lucide-react";
@@ -54,9 +54,9 @@ const About = () => {
           </div>
           <section className="about__text-background bg-sand-opacity shadow-black/30 shadow-lg mb-10">
             <p className="leading-relaxed text-left font-desc py-3 px-2">
-              Jag heter Minna och är en nyfiken, blivande moln/webbutvecklare.
-              Jag brinner för tillgänglighet och användarvänlighet, eftersom
-              alla ska kunna använda webben utan svårigheter, oavsett
+              Jag heter Minna och är en nyfiken, blivande webbutvecklare. Jag
+              brinner för tillgänglighet och användarvänlighet, eftersom alla
+              ska kunna använda webben utan svårigheter, oavsett
               förutsättningar. Dessutom bidrar tillgänglighet till att göra
               webben mer användarvänlig för alla, vilket jag ser som en
               självklar och viktig faktor i webbutveckling.
@@ -68,9 +68,10 @@ const About = () => {
               tjänster att implementera.
               <br />
               <br />
-              Ett annat område som jag tycker är intressant och betydande är
-              hållbar webbdesign. Jag utförde mitt examensarbete om just hållbar
-              webbdesign
+              Ett annat område som jag nyligen fick upp ögonen för är hållbar
+              webbdesign, vilket jag valde att skriva mitt examensarbete om. Jag
+              tycker att det är viktigt att vara medveten om hur hållbar en
+              digital tjänst är och hur den skulle kunna göras mer hållbar.
             </p>
           </section>
         </section>
